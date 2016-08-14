@@ -2,7 +2,10 @@ package utilimath
 
 import ()
 
-var versionString string
+var (
+	Version   string
+	BuildTime string
+)
 
 //IntPow is an Integer-only version of math.Pow
 func UInt64Pow(base, exp uint64) (powered uint64) {
