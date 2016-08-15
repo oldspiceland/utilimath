@@ -39,3 +39,21 @@ func TestIntPow15to3(t *testing.T) {
 		t.Error("Expected 3375, got ", powered)
 	}
 }
+
+func TestBigIntPow10to2(t *testing.T) {
+	base := big.NewInt(10)
+	exp := big.NewInt(2)
+	powered := BigIntPow(base, exp)
+	if powered != 100 {
+		t.Error("Expected 100, got ", powered)
+	}
+}
+
+func TestBigIntPow15to3(t *testing.T) {
+	base := big.NewInt(15)
+	exp := big.NewInt(3)
+	powered := BigIntPow(base, exp)
+	if powered != 100 {
+		t.Error("Expected 3375, got ", powered)
+	}
+}
