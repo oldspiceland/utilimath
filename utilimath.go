@@ -26,10 +26,10 @@ func IntPow(base, exp int) (powered int) {
 	return
 }
 
-func BigIntPow(base, exp big.Int) (powered big.Int) {
-	powered = base
+func BigIntPow(base, exp int) (powered *big.Int) {
+	powered = big.NewInt(base)
 	for i := 1; i < exp; i++ {
-		powered = powered * base
+		*powered = *powered * base
 	}
 	return
 }
