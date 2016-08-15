@@ -15,3 +15,11 @@ func UInt64Pow(base, exp uint64) (powered uint64) {
 	}
 	return
 }
+
+func IntPow(base, exp int) (powered int) {
+	powered = base
+	for i := 1; i < exp; i++ {
+		powered = powered * base
+	}
+	return
+}
