@@ -1,7 +1,7 @@
 package utilimath
 
 import (
-	"big"
+	"math/big"
 )
 
 var (
@@ -26,7 +26,7 @@ func IntPow(base, exp int) (powered int) {
 	return
 }
 
-func BigIntPow(base, exp big.NewInt) (powered big.NewInt) {
+func BigIntPow(base, exp *big.Int) (powered *big.Int) {
 	powered = base
 	for i := 1; i < exp; i++ {
 		powered = powered * base
