@@ -4,4 +4,6 @@ language: go
 go:
   - 1.6
 
-script: go test ./...
+script: 
+  - go test ./...
+  - make  
