@@ -1,6 +1,8 @@
 package utilimath
 
-import ()
+import (
+	"big"
+)
 
 var (
 	Version   string
@@ -17,6 +19,14 @@ func UInt64Pow(base, exp uint64) (powered uint64) {
 }
 
 func IntPow(base, exp int) (powered int) {
+	powered = base
+	for i := 1; i < exp; i++ {
+		powered = powered * base
+	}
+	return
+}
+
+func BigIntPow(base, exp big.NewInt) (powered big.NewInt) {
 	powered = base
 	for i := 1; i < exp; i++ {
 		powered = powered * base
